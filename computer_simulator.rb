@@ -61,11 +61,6 @@ class Computer
     # FIXME check for stack under/overflow in each push/pop
     # One can not execute the stack beyond its length
     while @pc < @stack.length()
-
-      # Get out if undefined instructions are found
-      #unless @stack[@pc]
-      #  break
-      #end
       
       args = @stack[@pc].split()
 
