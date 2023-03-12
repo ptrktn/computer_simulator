@@ -6,6 +6,8 @@ all: test
 # 1010
 .PHONY: test
 test:
+	# Run unit tests
+	./tc_computer_simulator.rb
 	# Two lines of output is expected
 	test "2" = "$(shell ./computer_simulator.rb | wc -l)"
 	# Check the output
