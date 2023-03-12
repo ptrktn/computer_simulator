@@ -107,9 +107,7 @@ class Computer
         value1 = @stack[@sp]
         @sp = @sp - 1
         value2 = @stack[@sp]
-        @sp = @sp - 1
         # Push the result to the stack
-        @sp = @sp + 1
         @stack[@sp] = value1 * value2
       else
         print("ERROR: undefined instruction #{instr}\n")
