@@ -155,7 +155,10 @@ def main
   # Execute the stack
   computer.set_address(MAIN_BEGIN).execute()
 
-  computer.print_stack()
+  # Print stack only in debug mode
+  if "1" == ENV["DEBUG"]
+    computer.print_stack()
+  end
 
 end
 
