@@ -55,6 +55,9 @@ class Computer
   # `STOP`: Exit the program
   # `PRINT`: Pop value from stack and print it
   # `PUSH arg`: Push argument to the stack
+  #
+  # FIXME rather than using stdout this method could return a string,
+  #       or a list of strings containing the output
   def execute(addr=0)
     @pc = addr
 
