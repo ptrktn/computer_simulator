@@ -1,5 +1,4 @@
 #!/usr/bin/ruby
-# My First Ruby application
 
 # Constants given in the assignment
 MAIN_BEGIN = 0
