@@ -15,7 +15,8 @@ end
 class Computer
   # Constructor 
   def initialize(stack_size=100)
-    # Stack is an instance variable
+    # The stack is implemented as an array
+    # FIXME the elements could be an array like: ["INSTRUCTION", ARG]
     @stack = []
     (0..stack_size-1).each do |i|
       @stack.push(nil)
@@ -34,7 +35,7 @@ class Computer
     return self
   end
 
-  # Insert instructions and their arguments to the stack and strings.
+  # Insert instructions and their arguments to the stack as strings
   def insert(arg1, arg2=nil)
     # FIXME there must be a better way to handle variable argument list
     if arg2
