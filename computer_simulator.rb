@@ -68,14 +68,14 @@ class Computer
         # An instruction without an argument
         instr = args[0]
         arg = nil
+        dbg("INSTRUCTION #{instr}")
       else
         # An instruction + argument
         # Assume the argument is always an integer
         instr = args[0]
         arg = args[1].to_i
+        dbg("INSTRUCTION #{instr} ARG #{arg}")
       end
-
-      dbg("I #{instr} A #{arg}")
 
       if "STOP" == instr
       # Stop the execution
@@ -141,6 +141,7 @@ def main
 
   # Return address for when print_tenten function finishes
   computer.insert("PUSH", 6)
+
   # Setup arguments and call print_tenten
   computer.insert("PUSH", 101).insert("PUSH", 10).insert("CALL", PRINT_TENTEN_BEGIN)
 
