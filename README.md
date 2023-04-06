@@ -7,3 +7,6 @@
 ## Enable verbose output
 
 `DEBUG=1 ./computer_simulator.rb`
+
+## TODO
+
