@@ -12,6 +12,16 @@ class TestComputerSimulator < Test::Unit::TestCase
     assert_instance_of(Computer, Computer.new())
   end
 
+  def test_stack_overflow
+    computer = Computer.new(100)
+    (0..30).each do |i|
+      computer.insert("PUSH", i)
+    end
+    computer.insert("STOP")
+    computer.execute()
+    computer.print_stack()
+  end
+    
   # FIXME add tests for all methods
   
 end
